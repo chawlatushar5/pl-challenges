@@ -1,0 +1,14 @@
+[
+  {"id": 1, "category": "Electronics", "amount": 120.00, "status": "completed"},
+  {"id": 2, "category": "Electronics", "amount": 300.00, "status": "refunded"},
+  {"id": 3, "category": "Books", "amount": 15.50, "status": "completed"},
+  {"id": 4, "category": "Books", "amount": 42.00, "status": "completed"},
+  {"id": 5, "category": "Clothing", "amount": 60.00, "status": "cancelled"},
+  {"id": 6, "category": "Clothing", "amount": 25.00, "status": "completed"},
+  {"id": 7, "category": "Electronics", "amount": 75.25, "status": "completed"},
+  {"id": 8, "category": "Books", "amount": 9.99, "status": "refunded"},
+  {"id": 9, "category": "Clothing", "amount": 100.00, "status": "completed"},
+  {"id": 10, "category": "Electronics", "amount": 50.00, "status": "cancelled"},
+  {"id": 11, "category": "Books", "amount": 20.00, "status": "completed"},
+  {"id": 12, "category": "Clothing", "amount": 33.33, "status": "completed"}
+]

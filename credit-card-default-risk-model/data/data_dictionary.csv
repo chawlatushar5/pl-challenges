@@ -1,0 +1,53 @@
+file,variable_name,description,data_type,values_notes
+applicants.csv,customer_id,Unique applicant identifier; join key between the two files.,String,CUST100001–CUST110000
+applicants.csv,application_date,Date the credit card application was submitted.,Date,"YYYY-MM-DD, 2024"
+applicants.csv,app_channel,Channel through which the application was received.,Categorical,Online / Mobile App / Branch / Partner Referral / Direct Mail
+applicants.csv,product_requested,Card product the applicant applied for.,Categorical,Cashback / Travel Rewards / Low APR / Secured / Student
+applicants.csv,age_years,Applicant age in whole years at application.,Numeric,19–79
+applicants.csv,gender_at_birth,Sex assigned at birth as self-reported on the application.,Categorical,Female / Male
+applicants.csv,sexual_orientation,Self-reported sexual orientation.,Categorical,Heterosexual / Gay or Lesbian / Bisexual / Prefer not to say; blank = not provided
+applicants.csv,race_ethnicity,Self-reported race or ethnicity.,Categorical,6 levels; blank = not provided
+applicants.csv,marital_status,Self-reported marital status.,Categorical,Married / Single / Divorced / Separated / Widowed
+applicants.csv,num_dependents,Number of financial dependents declared by the applicant.,Numeric,0–6
+applicants.csv,receives_public_assistance_income,1 if any part of stated income derives from a public assistance program.,Binary,0/1
+applicants.csv,state,US state of the applicant's residential address.,Categorical,"2-letter code, 30 states"
+applicants.csv,zip5,5-digit ZIP code of the applicant's residential address.,String,Leading zeros are significant
+applicants.csv,zip3_median_income,"Median household income of the applicant's ZIP3 area, from census overlay.",Numeric,USD
+applicants.csv,housing_status,Applicant's declared residential arrangement.,Categorical,Own with Mortgage / Rent / Own Outright / Live with Family / Other
+applicants.csv,months_at_current_address,Months the applicant has lived at their current address.,Numeric,Months
+applicants.csv,employment_status,Applicant's declared employment situation.,Categorical,6 levels
+applicants.csv,months_at_current_employer,"Months with current employer; 0 for retired, student, or unemployed.",Numeric,Months
+applicants.csv,stated_annual_income,"Gross annual income declared by the applicant, unverified.",Numeric,USD
+applicants.csv,requested_credit_line,Credit limit requested by the applicant on the application.,Numeric,USD
+applicants.csv,income_to_requested_line_ratio,Stated annual income divided by the requested credit line.,Numeric,Ratio
+applicants.csv,existing_relationship_flag,1 if the applicant already holds any product with the issuer.,Binary,0/1
+applicants.csv,num_existing_issuer_products,Count of products the applicant currently holds with the issuer.,Numeric,0 if no relationship
+applicants.csv,avg_deposit_balance_3m,Average deposit balance with the issuer over the prior 3 months.,Numeric,USD; 0 if no deposit relationship
+applicants.csv,bureau_score,Generic bureau risk score pulled at application.,Numeric,"300–850, higher = lower risk"
+applicants.csv,months_since_oldest_tradeline,Age of the applicant's oldest credit file tradeline.,Numeric,Months
+applicants.csv,num_open_tradelines,Total open tradelines of any type on the bureau file.,Numeric,Count
+applicants.csv,num_open_cards,Open revolving bankcard tradelines on the bureau file.,Numeric,Count
+applicants.csv,num_trades_opened_12m,Tradelines of any type opened in the last 12 months.,Numeric,Count
+applicants.csv,num_inquiries_6m,Hard credit inquiries recorded in the last 6 months.,Numeric,Count
+applicants.csv,total_revolving_limit,Sum of credit limits across all open revolving tradelines.,Numeric,USD
+applicants.csv,total_revolving_balance,Sum of balances across all open revolving tradelines.,Numeric,USD
+applicants.csv,revolving_utilization_pct,Total revolving balance as a percentage of total revolving limit.,Numeric,Percent; can exceed 100
+applicants.csv,num_cards_util_gt_75pct,Count of open cards utilised above 75% of their individual limit.,Numeric,Count
+applicants.csv,num_delinq_30d_24m,Times 30+ days past due on any tradeline in the last 24 months.,Numeric,Count
+applicants.csv,num_delinq_60d_24m,Times 60+ days past due on any tradeline in the last 24 months.,Numeric,Count
+applicants.csv,num_delinq_90p_24m,Times 90+ days past due on any tradeline in the last 24 months.,Numeric,Count
+applicants.csv,worst_status_24m,Worst delinquency status reached on any tradeline in the last 24 months.,Numeric,0 / 30 / 60 / 90 days
+applicants.csv,months_since_last_delinquency,Months since the most recent delinquency; 999 if never delinquent.,Numeric,"999 is a sentinel, not a duration"
+applicants.csv,num_collections_24m,Accounts placed in third-party collections in the last 24 months.,Numeric,Count
+applicants.csv,total_collection_amount,Total dollar amount currently in collections.,Numeric,USD; 0 if none
+applicants.csv,num_charge_offs_24m,Tradelines charged off by a lender in the last 24 months.,Numeric,Count
+applicants.csv,public_record_flag,"1 if any bankruptcy, tax lien, or civil judgment appears on file.",Binary,0/1
+applicants.csv,months_since_bankruptcy,Months since most recent bankruptcy filing; 999 if none on file.,Numeric,"999 is a sentinel, not a duration"
+applicants.csv,has_mortgage,1 if the applicant has an open mortgage tradeline.,Binary,0/1
+applicants.csv,mortgage_balance,Outstanding balance across open mortgage tradelines.,Numeric,USD; 0 if none
+applicants.csv,num_auto_loans,Open auto loan or auto lease tradelines.,Numeric,Count
+applicants.csv,total_debt_balance,"Sum of mortgage, revolving, and auto balances on the bureau file.",Numeric,USD
+applicants.csv,debt_to_income_ratio,Estimated monthly debt service as a percentage of monthly stated income.,Numeric,Percent
+performance.csv,customer_id,Unique applicant identifier; join key between the two files.,String,"Present only for the 6,000 approved and booked accounts"
+performance.csv,bad_flag_90plus_stmt6,1 if the account was 90 or more days past due as of statement 6; 0 otherwise.,Binary,0/1
+performance.csv,net_loss_amount_usd,"Net dollar loss recognised on the account, after any recoveries.",Numeric,USD; 0.00 for accounts that did not default

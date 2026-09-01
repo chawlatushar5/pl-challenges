@@ -1,0 +1,7 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "properties": {"name": "Times Square"}, "geometry": {"type": "Point", "coordinates": [-73.9855, 40.7580]}},
+    {"type": "Feature", "properties": {"name": "Central Park"}, "geometry": {"type": "Point", "coordinates": [-73.9654, 40.7829]}}
+  ]
+}
